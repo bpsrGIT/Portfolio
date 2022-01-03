@@ -539,7 +539,8 @@ header .logo {
 }
 
 .projectsBody .videoShowcase iframe {
-  height: 30vh;
+  height: 50vh;
+  width: 60vw;
 }
 
 .projectsBody .backPage {
