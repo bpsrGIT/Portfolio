@@ -597,6 +597,7 @@ header .logo {
 }
 
 .extraProjects .container .panel {
+  background-color: #475B5A;
   display: -ms-grid;
   display: grid;
   background-size: auto 100%;
@@ -628,7 +629,11 @@ header .logo {
   left: 20px;
   margin: 0;
   opacity: 0;
-  color: white;
+  color: #475B5A;
+}
+
+.extraProjects .container .activePanel {
+  background-color: whitesmoke;
 }
 
 .extraProjects .container .panel.activePanel {
@@ -782,18 +787,21 @@ header .logo {
   font-size: 1rem;
   height: 1.5rem;
   overflow: hidden;
+  color: white;
 }
 
 .calculator .calc-display .cal-display2 {
   font-size: 1.5rem;
+  color: white;
+  height: 2rem;
 }
 
 .calculator .calc-display .cal-temp-result {
-  position: absolute;
-  bottom: 0%;
+  color: white;
+  position: relative;
+  text-align: left;
   left: 1rem;
   opacity: .4;
-  background-color: yellow;
 }
 
 .calculator .all-buttons {
