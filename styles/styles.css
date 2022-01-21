@@ -574,7 +574,7 @@ header .logo {
   color: whitesmoke;
 }
 
-.extraProjects {
+.miniProjects .projectsBody .extraProjects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,19 +584,18 @@ header .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
-  margin: 0;
 }
 
-.extraProjects .container {
+.miniProjects .projectsBody .extraProjects .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 90vw;
 }
 
-.extraProjects .container .panel {
+.miniProjects .projectsBody .extraProjects .container .panel {
   background-color: #475B5A;
   display: -ms-grid;
   display: grid;
@@ -622,7 +621,7 @@ header .logo {
       align-content: center;
 }
 
-.extraProjects .container .panel h3, .extraProjects .container .panel p {
+.miniProjects .projectsBody .extraProjects .container .panel h3, .miniProjects .projectsBody .extraProjects .container .panel p {
   font-size: 2rem;
   position: absolute;
   bottom: 20px;
@@ -632,41 +631,41 @@ header .logo {
   color: #475B5A;
 }
 
-.extraProjects .container .activePanel {
+.miniProjects .projectsBody .extraProjects .container .activePanel {
   background-color: whitesmoke;
 }
 
-.extraProjects .container .panel.activePanel {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
   cursor: default;
 }
 
-.extraProjects .container .panel.activePanel h3, .extraProjects .container .panel.activePanel p {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel h3, .miniProjects .projectsBody .extraProjects .container .panel.activePanel p {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in 0.4s;
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-.extraProjects .container .panel.activePanel .passwordGenerator {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel .passwordGenerator {
   display: inherit;
   -webkit-transition: 4s ease-in 5s;
   transition: 4s ease-in 5s;
 }
 
-.extraProjects .container .panel.activePanel .calculator {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel .calculator {
   display: inherit;
   -webkit-transition: 4s ease-in 5s;
   transition: 4s ease-in 5s;
 }
 
 @media (max-width: 480px) {
-  .extraProjects .container {
+  .miniProjects .projectsBody .extraProjects .container {
     width: 100vw;
   }
-  .extraProjects .panel:nth-of-type(4),
-  .extraProjects .panel:nth-of-type(5) {
+  .miniProjects .projectsBody .extraProjects .panel:nth-of-type(4),
+  .miniProjects .projectsBody .extraProjects .panel:nth-of-type(5) {
     display: none;
   }
 }
