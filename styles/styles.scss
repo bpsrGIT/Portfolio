@@ -24,6 +24,26 @@ html {
         
     }
 }
+html:focus {
+    outline: none;
+  }
+html .circle {
+    position: fixed;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+    z-index: 100;
+}
+@keyframes scale {
+    to {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  }
+
 
 .indexTop {
     background-color: black;
@@ -264,7 +284,7 @@ header {
     }
 }
 .projectContainer {
-    width: 80vw;
+    width: auto;
     z-index: 0;
     margin: 2rem 0;
     &:hover {

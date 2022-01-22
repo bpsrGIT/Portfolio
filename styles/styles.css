@@ -20,6 +20,39 @@ html {
   font-family: 'Outfit', sans-serif;
 }
 
+html:focus {
+  outline: none;
+}
+
+html .circle {
+  position: fixed;
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-animation: scale 0.5s ease-out;
+          animation: scale 0.5s ease-out;
+  z-index: 100;
+}
+
+@-webkit-keyframes scale {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
 .indexTop {
   background-color: black;
   display: -webkit-box;
@@ -393,7 +426,7 @@ header .logo {
 }
 
 .projectContainer {
-  width: 80vw;
+  width: auto;
   z-index: 0;
   margin: 2rem 0;
 }
