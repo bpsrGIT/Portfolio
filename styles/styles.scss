@@ -457,11 +457,7 @@ header {
                         opacity: 1;
                         transition: opacity 0.3s ease-in 0.4s;
                     }
-                    .passwordGenerator {
-                        display: inherit;
-                        transition: 4s ease-in 5s;
-                    }
-                    .calculator {
+                    .passwordGenerator, .calculator, .joke-container {
                         display: inherit;
                         transition: 4s ease-in 5s;
                     }
@@ -605,6 +601,41 @@ header {
         }
         .cal-button-zero {
             grid-column: 1/3;
+        }
+    }
+}
+.joke-container{
+    display: none;
+    .joke-box{
+        display: flex;
+        background-color: #BBBBBF;
+        box-shadow: 0px 10px 20px rgba(255,255,255,0.2);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 30em;
+        height: 20em;
+        .joke-title{
+            font-size: 1rem;
+        }
+        #joke-area{
+            text-align: center;
+            font-style: italic;
+            font-size: .8rem;
+        }
+        #joke-btn{
+            background-image: url('https://cdn-icons.flaticon.com/png/512/2959/premium/2959052.png?token=exp=1642844147~hmac=c36ae6363e1af8336c8e98e95fc8d4b3');
+            overflow: hidden;
+            height: 4em;
+            width: 4em;
+            border: none;
+            border-radius: 50px;
+        }
+        .btn {
+            height: 100%;
+            width: 100%;
         }
     }
 }
