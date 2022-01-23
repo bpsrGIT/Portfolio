@@ -26,13 +26,14 @@
                 <h3>Send me a message</h3>
             </div>
             <div class="contactForm">
-                <form action="https://formsubmit.co/bsp.pe.pe@gmail.com" method="POST">
+                <form action="https://formspree.io/f/xayvqvjj" method="POST" id="my-form">
                     <input class="inputArea inputSmall" required placeholder="Full Name" type="text" name="name">
                     <input class="inputArea inputSmall" required placeholder="Mobile Number" type="tel" name="phone">
                     <input class="inputArea inputSmall" required placeholder="Email" type="email" name="email">
                     <textarea class="inputMsg" required placeholder="Inquiry" cols="30" rows="10" name="message"></textarea>
-                    <button class="button button-contact">Submit</button>
+                    <button type="submit" class="button button-contact">Submit</button>
                 </form>
+                <div id="my-form-status"></div>
             </div>
         </div>    
         

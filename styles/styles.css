@@ -13,6 +13,7 @@
 html {
   scroll-behavior: smooth;
   background-color: black;
+  overflow-x: scroll;
 }
 
 .landing {
@@ -534,6 +535,15 @@ header .logo {
   padding: .5rem;
   font-size: .8rem;
   background-color: lightgray;
+}
+
+.contactBody .contactForm #my-form-status {
+  padding: .5rem;
+  height: 2rem;
+  font-size: 1rem;
+  width: auto;
+  color: white;
+  text-align: center;
 }
 
 .projectsBody {

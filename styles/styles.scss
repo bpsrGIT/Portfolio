@@ -15,6 +15,7 @@
 html {
     scroll-behavior: smooth;
     background-color: black;
+    overflow-x: scroll;
 }
 
 .landing {
@@ -373,6 +374,14 @@ header {
             font-size: .8rem;
             background-color: lightgray;
         };
+        #my-form-status {
+            padding: .5rem;
+            height: 2rem;
+            font-size: 1rem;
+            width: auto;
+            color: white;
+            text-align: center;
+        }
     }
 }
 
