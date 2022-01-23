@@ -1,7 +1,7 @@
 {
   "name": "web-protfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "portfolio page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,13 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/bpsrGIT/Portfolio.git"
   },
-  "author": "",
+  "author": "rsb",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bpsrGIT/Portfolio/issues"
   },
-  "homepage": "https://github.com/bpsrGIT/Portfolio#readme",
-  "dependencies": {
-    "sweetalert2": "^11.3.6"
-  }
+  "homepage": "https://github.com/bpsrGIT/Portfolio#readme"
 }
