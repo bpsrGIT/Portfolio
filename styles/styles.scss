@@ -15,15 +15,12 @@
 html {
     scroll-behavior: smooth;
     background-color: black;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .landing {
-    background-color: black;
     font-family: 'Outfit', sans-serif;
-    @media(max-width: 480px) {
-        
-    }
+    overflow: hidden;
 }
 html:focus {
     outline: none;
@@ -275,11 +272,17 @@ header {
         color: whitesmoke;
         font-weight: normal;
     };
-    .credImg {
-        width: 10em;
+    .image-container{
+        background-color: white;
         height: 10em;
-        object-fit:fill;
-    };
+        border-radius: 25px;
+        .credImg {
+            width: 10em;
+            height: 10em;
+            object-fit: contain;
+            border-radius: 25px;
+        }
+    }
     .slu {
         
     }

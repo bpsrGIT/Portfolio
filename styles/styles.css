@@ -13,12 +13,12 @@
 html {
   scroll-behavior: smooth;
   background-color: black;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .landing {
-  background-color: black;
   font-family: 'Outfit', sans-serif;
+  overflow: hidden;
 }
 
 html:focus {
@@ -419,11 +419,18 @@ header .logo {
   font-weight: normal;
 }
 
-.projects .credImg {
+.projects .image-container {
+  background-color: white;
+  height: 10em;
+  border-radius: 25px;
+}
+
+.projects .image-container .credImg {
   width: 10em;
   height: 10em;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 25px;
 }
 
 .projectContainer {
