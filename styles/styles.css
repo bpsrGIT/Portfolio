@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  color: #475B5A;
+  color: #475b5a;
   font-size: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -77,8 +77,8 @@ html .circle {
   font-size: 5vw;
   text-align: center;
   font-family: 'Architects Daughter', cursive;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-name: introZoom;
           animation-name: introZoom;
 }
@@ -102,13 +102,13 @@ html .circle {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #475B5A;
+  color: #475b5a;
   font-size: 10vw;
   font-weight: bolder;
   text-decoration: none;
   text-align: center;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-name: introZoom;
           animation-name: introZoom;
 }
@@ -117,13 +117,13 @@ html .circle {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #A3A9AA;
+  color: #a3a9aa;
   font-size: 10vw;
   font-weight: bolder;
   text-decoration: none;
   text-align: center;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-name: introZoom;
           animation-name: introZoom;
 }
@@ -162,7 +162,7 @@ nav .navbar {
 }
 
 nav .navItem {
-  color: #475B5A;
+  color: #475b5a;
   margin: 1rem 0;
   font-size: 1rem;
   text-decoration: none;
@@ -240,7 +240,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 3rem;
+  padding: 1em 1em;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,6 +251,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 10vh;
 }
 
 header .logo {
@@ -347,50 +348,87 @@ header .logo {
           transform-origin: bottom left;
 }
 
-.social {
-  position: absolute;
-  bottom: 5vh;
-  z-index: 8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.aboutContent {
+  padding: 3rem;
 }
 
-.social li {
-  list-style: none;
+.aboutContent .inbetName {
+  color: lightgray;
+  font-size: 0.8rem;
 }
 
-.social li a {
-  display: inline-block;
-  margin-right: 20px;
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-transition: .5s;
-  transition: .5s;
+.aboutContent .aboutTitle {
+  font-size: 4vw;
+  text-align: center;
 }
 
-.social li a:hover {
-  -webkit-transform: scale(0.5) translateY(-15px);
-          transform: scale(0.5) translateY(-15px);
+.aboutContent .aboutText {
+  margin: 1rem 0 1rem 0;
+  text-align: justify;
 }
 
-.social li a .contactLogo {
-  height: 40px;
-  width: 40px;
+.aboutContent .aboutCenter {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.social .socialText {
+.aboutContent .aboutQuote {
+  text-align: end;
+  font-style: italic;
+  font-size: 0.8rem;
   color: whitesmoke;
-  font-size: .7rem;
-  margin: 0 1rem 0 0;
+}
+
+.projectContainer {
+  width: auto;
+  z-index: 0;
+  margin: 2rem 0;
+}
+
+.projectContainer:hover {
+  -webkit-transform: translateX(5vw);
+          transform: translateX(5vw);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.projectContainer .projectLink {
+  text-decoration: none;
+}
+
+.projectContainer .projectTitle {
+  font-size: 5vw;
+  color: whitesmoke;
+}
+
+.projectContainer .projectDescription {
+  font-size: 2vw;
+}
+
+@media (max-width: 599px) {
+  .projectContainer {
+    width: auto;
+    z-index: 0;
+    margin: 1rem 0;
+  }
+  .projectContainer:hover {
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  .projectContainer .projectLink {
+    text-decoration: none;
+  }
+  .projectContainer .projectTitle {
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+  .projectContainer .projectDescription {
+    font-size: 1rem;
+  }
 }
 
 .projects .projectEntry {
@@ -433,63 +471,99 @@ header .logo {
   border-radius: 25px;
 }
 
-.projectContainer {
-  width: auto;
-  z-index: 0;
-  margin: 2rem 0;
+@media (max-width: 599px) {
+  .projects {
+    padding: 1em;
+  }
+  .projects .projectEntry {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .projects .projectEntry .image-container {
+    background-color: white;
+    height: 10em;
+    border-radius: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .projectEntry .image-container .credImg {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 25px;
+  }
+  .projects .credText {
+    font-size: 0.8rem;
+  }
 }
 
-.projectContainer:hover {
-  -webkit-transform: translateX(5vw);
-          transform: translateX(5vw);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+.social {
+  position: absolute;
+  bottom: 5vh;
+  z-index: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.projectContainer .projectLink {
-  text-decoration: none;
+.social li {
+  list-style: none;
 }
 
-.projectContainer .projectTitle {
-  font-size: 4vw;
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  -webkit-transform: scale(0.5) translateY(-15px);
+          transform: scale(0.5) translateY(-15px);
+}
+
+.social li a .contactLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.social .socialText {
   color: whitesmoke;
+  font-size: 0.7rem;
+  margin: 0 1rem 0 0;
 }
 
-.projectContainer .projectDescription {
-  font-size: 2vw;
-}
-
-.aboutContent {
-  padding: 3rem;
-}
-
-.aboutContent .inbetName {
-  color: lightgray;
-  font-size: .8rem;
-}
-
-.aboutContent .aboutTitle {
-  font-size: 4vw;
-  text-align: center;
-}
-
-.aboutContent .aboutText {
-  margin: 1rem 0 1rem 0;
-  text-align: justify;
-}
-
-.aboutContent .aboutCenter {
-  text-align: center;
-  vertical-align: middle;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.aboutContent .aboutQuote {
-  text-align: end;
-  font-style: italic;
-  font-size: .8rem;
-  color: whitesmoke;
+@media (max-width: 599px) {
+  .social {
+    position: fixed;
+    display: -ms-grid;
+    display: grid;
+    bottom: 0;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+  }
+  .social .socialText {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: twelve;
+  }
 }
 
 .contactBody {
@@ -512,11 +586,11 @@ header .logo {
 
 .contactBody .contactForm .inputArea {
   width: 60%;
-  margin: .2rem 0;
-  border: solid 2px #475B5A;
+  margin: 0.2rem 0;
+  border: solid 2px #475b5a;
   border-radius: 10px;
-  padding: .5rem;
-  font-size: .8rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
   background-color: lightgray;
 }
 
@@ -525,32 +599,53 @@ header .logo {
 }
 
 .contactBody .contactForm button {
-  background-color: #475B5A;
+  background-color: #475b5a;
   color: whitesmoke;
   width: 60%;
-  margin: .2rem 0;
-  border: solid 2px #475B5A;
+  margin: 0.2rem 0;
+  border: solid 2px #475b5a;
   border-radius: 10px;
   height: 2.5rem;
 }
 
 .contactBody .contactForm .inputMsg {
   width: 60%;
-  margin: .2rem 0;
-  border: solid 2px #475B5A;
+  margin: 0.2rem 0;
+  border: solid 2px #475b5a;
   border-radius: 10px;
-  padding: .5rem;
-  font-size: .8rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
   background-color: lightgray;
 }
 
 .contactBody .contactForm #my-form-status {
-  padding: .5rem;
+  padding: 0.5rem;
   height: 2rem;
   font-size: 1rem;
   width: auto;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .mainBody .contactBody {
+    position: absolute;
+    width: 90vw;
+    top: 15vh;
+    margin: 0;
+  }
+  .mainBody .contactBody .contactForm .inputArea {
+    width: 100%;
+  }
+  .mainBody .contactBody .contactForm .inputSmall {
+    height: 2.5rem;
+  }
+  .mainBody .contactBody .contactForm button {
+    width: 100%;
+  }
+  .mainBody .contactBody .contactForm .inputMsg {
+    width: 100%;
+  }
 }
 
 .projectsBody {
@@ -585,7 +680,7 @@ header .logo {
 
 .projectsBody .videoShowcase a p {
   color: whitesmoke;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .projectsBody .videoShowcase iframe {
@@ -619,7 +714,7 @@ header .logo {
 }
 
 .projectsBody .backPage a p {
-  font-size: .5rem;
+  font-size: 0.5rem;
   text-align: center;
   color: whitesmoke;
 }
@@ -646,7 +741,7 @@ header .logo {
 }
 
 .miniProjects .projectsBody .extraProjects .container .panel {
-  background-color: #475B5A;
+  background-color: #475b5a;
   display: -ms-grid;
   display: grid;
   background-size: auto 100%;
@@ -655,9 +750,9 @@ header .logo {
   height: 80vh;
   border-radius: 50px;
   cursor: pointer;
-  -webkit-box-flex: .5;
-      -ms-flex: .5;
-          flex: .5;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
   margin: 1em;
   position: relative;
   -webkit-transition: -webkit-box-flex 0.7s ease-in;
@@ -671,14 +766,15 @@ header .logo {
       align-content: center;
 }
 
-.miniProjects .projectsBody .extraProjects .container .panel h3, .miniProjects .projectsBody .extraProjects .container .panel p {
+.miniProjects .projectsBody .extraProjects .container .panel h3,
+.miniProjects .projectsBody .extraProjects .container .panel p {
   font-size: 2rem;
   position: absolute;
   bottom: 20px;
   left: 20px;
   margin: 0;
   opacity: 0;
-  color: #475B5A;
+  color: #475b5a;
 }
 
 .miniProjects .projectsBody .extraProjects .container .activePanel {
@@ -692,13 +788,16 @@ header .logo {
   cursor: default;
 }
 
-.miniProjects .projectsBody .extraProjects .container .panel.activePanel h3, .miniProjects .projectsBody .extraProjects .container .panel.activePanel p {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel h3,
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel p {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in 0.4s;
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-.miniProjects .projectsBody .extraProjects .container .panel.activePanel .passwordGenerator, .miniProjects .projectsBody .extraProjects .container .panel.activePanel .calculator, .miniProjects .projectsBody .extraProjects .container .panel.activePanel .joke-container {
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel .passwordGenerator,
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel .calculator,
+.miniProjects .projectsBody .extraProjects .container .panel.activePanel .joke-container {
   display: inherit;
   -webkit-transition: 4s ease-in 5s;
   transition: 4s ease-in 5s;
@@ -716,7 +815,7 @@ header .logo {
 
 .passwordGenerator {
   display: none;
-  background-color: #BBBBBF;
+  background-color: #bbbbbf;
   -webkit-box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
           box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
   padding: 2rem;
@@ -727,7 +826,7 @@ header .logo {
 
 .passwordGenerator .btn {
   border: none;
-  background-color: #8D8E8E;
+  background-color: #8d8e8e;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -763,7 +862,7 @@ header .logo {
   position: relative;
   font-size: 1rem;
   letter-spacing: 1px;
-  padding: .7rem .7rem;
+  padding: 0.7rem 0.7rem;
   height: 3rem;
   width: 100%;
 }
@@ -777,7 +876,7 @@ header .logo {
 .passwordGenerator .result-container .btn {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 5px;
   height: 2rem;
   width: 2rem;
@@ -807,7 +906,7 @@ header .logo {
 
 .calculator {
   display: none;
-  background-color: #BBBBBF;
+  background-color: #bbbbbf;
   -webkit-box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
           box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
   padding: 0;
@@ -822,11 +921,11 @@ header .logo {
   height: 6rem;
   width: 100%;
   text-align: right;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .calculator .calc-display .cal-display1 {
-  opacity: .4;
+  opacity: 0.4;
   font-size: 1rem;
   height: 1.5rem;
   overflow: hidden;
@@ -844,7 +943,7 @@ header .logo {
   position: relative;
   text-align: left;
   left: 1rem;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .calculator .all-buttons {
@@ -853,13 +952,13 @@ header .logo {
   -ms-grid-rows: (1fr)[4];
   -ms-grid-columns: (1fr)[4];
       grid-template: repeat(4, 1fr)/repeat(4, 1fr);
-  background-color: #BBBBBF;
+  background-color: #bbbbbf;
 }
 
 .calculator .all-buttons .cal-button {
   border: 1px silver;
   height: 3.65rem;
-  color: #475B5A;
+  color: #475b5a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,7 +972,7 @@ header .logo {
 }
 
 .calculator .all-buttons .cal-button:hover {
-  background: #BBBBBF;
+  background: #bbbbbf;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
 }
@@ -892,7 +991,7 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #BBBBBF;
+  background-color: #bbbbbf;
   -webkit-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
           box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
   -webkit-box-orient: vertical;
@@ -918,7 +1017,7 @@ header .logo {
 .joke-container .joke-box #joke-area {
   text-align: center;
   font-style: italic;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .joke-container .joke-box #joke-btn {
